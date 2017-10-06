@@ -2,7 +2,7 @@ package etl.cloud.google.adwords;
 
 import com.google.api.ads.adwords.lib.client.AdWordsSession;
 import com.google.api.ads.adwords.lib.client.reporting.ReportingConfiguration;
-import com.google.api.ads.adwords.lib.jaxb.v201609.DownloadFormat;
+import com.google.api.ads.adwords.lib.jaxb.v201708.DownloadFormat;
 import com.google.api.ads.adwords.lib.utils.ReportDownloadResponse;
 import com.google.api.ads.adwords.lib.utils.ReportDownloadResponseException;
 import com.google.api.ads.adwords.lib.utils.ReportException;
@@ -66,7 +66,7 @@ public class ReportDownloader {
         // ReportDownloader.setReportDownloadTimeout to set a timeout (in milliseconds)
         // for CONNECT and READ in report downloads.
         ReportDownloadResponse response =
-                new com.google.api.ads.adwords.lib.utils.v201609.ReportDownloader(session).downloadReport(
+                new com.google.api.ads.adwords.lib.utils.v201708.ReportDownloader(session).downloadReport(
                         query,
                         DownloadFormat.CSV
                 );
